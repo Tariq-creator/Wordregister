@@ -29,7 +29,7 @@ void menuOfFunctions(char ordbok[NR_OF_WORDS][WORDLENGTH], int nrOfWords) {
 
   int specifiedValue;
 
-  printf("(1)Registrera (2)Skriva ut (3)Radera (4)Blanda (5)Vanligaste bokstaven (6)Avsluta: ");
+  printf("(1)Registrera (2)Skriva ut (3)Radera (4)Blanda (5)Avsluta: ");
   scanf("%d", &specifiedValue);
 
   switch (specifiedValue) {
@@ -51,9 +51,6 @@ void menuOfFunctions(char ordbok[NR_OF_WORDS][WORDLENGTH], int nrOfWords) {
       menuOfFunctions(ordbok, nrOfWords);
       break;
     case 5:
-      frequentCharacter(ordbok, nrOfWords);
-      menuOfFunctions(ordbok, nrOfWords);
-    case 6:
       printf("Avslutar\n");
       return;
     default:
@@ -158,24 +155,6 @@ void mixDictionary(char ordbok[NR_OF_WORDS][WORDLENGTH], int nrOfWords) {
       strcpy(tmpString[0], ordbok[j]);
       strcpy(ordbok[j], ordbok[rndmIndex]);
       strcpy(ordbok[rndmIndex], tmpString[0]);
-
-    }
-
-  }
-
-}
-
-void frequentCharacter(char ordbok[NR_OF_WORDS][WORDLENGTH], int nrOfWords) {
-
-  char alpha[26];
-
-  for(int i = 0; i < nrOfWords; i++) {
-
-    for(int j = 0; j < strlen(ordbok[i]); j++) {
-
-      if(alpha == ordbok[i][j]) {
-        
-      }
 
     }
 
